@@ -14,6 +14,8 @@ int main()
 	unique_ptr<int> resultado = triplicar(5);
 	cout << "Resultado triplicar: " << *resultado << endl;
 
+	// El array dinamico de la Parte 5 (arr = new int[tamano]) tambien seria buen candidato para unique_ptr<int[]> porque su delete [] se haria automaticamente al salir de scope, evitando el riesgo de olvidar liberarlo y provocar un memory leak.
+
 	return 0;
 }
 
